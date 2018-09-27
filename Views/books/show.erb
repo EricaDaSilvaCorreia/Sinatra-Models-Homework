@@ -1,0 +1,16 @@
+
+<img src="<%= @book.cover %>" alt="" height="300" width="200" style="border: 1px solid black; padding: 100px; padding-bottom:200px;">
+
+<h1><%= @book.title %></h1>
+<h3>Published in <%= @book.published %></h3>
+<h3>By <%= @book.author %></h3>
+<h5 style="width: 500px;"> <%= @book.description %></h5>
+
+<a href="/books/<%= @book.id
+ %>/edit">Edit</a>
+
+<form class="" action="/books/<%= @book.id
+ %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete">
+</form>

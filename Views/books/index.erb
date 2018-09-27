@@ -1,0 +1,12 @@
+<h1 style="text-align: center">H O M E</h1>
+
+<% @books.each do |book| %>
+
+  <h3> <%= book.id %></h3>
+  <img src="<%= book.cover %>" alt="" height="300" width="200" style="border: 1px solid black; padding: 100px; padding-bottom:200px;">
+  <h1><a href="/books/<%= book.id %>"><%= book.title %></a></h1>
+  <h3>Published : <%= book.published %></h3>
+  <h4>Author : <%= book.author %></h4>
+
+
+<% end %>
